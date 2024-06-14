@@ -1,11 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
+import Calendar, { CalendarProps } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './CalendarStyles.css';
 
-const events = {
+type EventDetails = {
+  title: string;
+  description: string;
+  time: string;
+};
+
+const events: { [key: string]: EventDetails[] } = {
   '2024-05-26': [
     { title: 'Event 1', description: 'Details for event 1', time: '10:00 AM' },
     { title: 'Event 2', description: 'Details for event 2', time: '12:00 PM' },
@@ -15,12 +21,21 @@ const events = {
 
 const CalendarSection: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-  const [eventDetails, setEventDetails] = useState<Array<{ title: string; description: string; time: string }>>([]);
+  const [eventDetails, setEventDetails] = useState<EventDetails[]>([]);
 
-  const handleDateChange = (date: Date) => {
-    setSelectedDate(date);
-    const dateString = date.toISOString().split('T')[0];
-    setEventDetails(events[dateString] || []);
+  const handleDateChange: CalendarProps['onChange'] = (value) => {
+    if (value instanceof Date) {
+      setSelectedDate(value);
+      const dateString = value.toISOString().split('T')[0];
+      setEventDetails(events[dateString] || []);
+    } else if (Array.isArray(value) && value.length > 0 && value[0] instanceof Date) {
+      setSelectedDate(value[0]);
+      const dateString = value[0].toISOString().split('T')[0];
+      setEventDetails(events[dateString] || []);
+    } else {
+      setSelectedDate(new Date());
+      setEventDetails([]);
+    }
   };
 
   return (
