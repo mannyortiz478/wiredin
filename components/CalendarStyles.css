@@ -1,0 +1,94 @@
+/* CalendarStyles.css */
+
+.react-calendar {
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .react-calendar__tile {
+    max-width: 100%;
+    padding: 10px;
+    background: var(--tile-bg-color);
+    border-radius: 48px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .react-calendar__tile--now {
+    background: var(--today-bg-color);
+    color: var(--today-text-color);
+  }
+  
+  .react-calendar__tile--active {
+    background: var(--active-bg-color);
+    color: var(--active-text-color);
+  }
+  
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background: var(--hover-bg-color);
+    color: var(--hover-text-color);
+  }
+  
+  .react-calendar__navigation button {
+    color: var(--nav-button-color);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .react-calendar__navigation button:disabled {
+    color: var(--nav-button-disabled-color);
+  }
+  
+  .react-calendar__month-view__weekdays {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--weekdays-color);
+  }
+  
+  .react-calendar__month-view__days__day--weekend {
+    color: var(--weekend-color);
+  }
+  
+  :root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --tile-bg-color: #f0f0f0;
+    --today-bg-color: #22C55E;
+    --today-text-color: #fff;
+    --active-bg-color: #22C55E;
+    --active-text-color: #fff;
+    --hover-bg-color: #e0e0e0;
+    --hover-text-color: #000;
+    --nav-button-color: #333;
+    --nav-button-disabled-color: #aaa;
+    --weekdays-color: #666;
+    --weekend-color: black;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #22C55E;
+      --text-color: #fff;
+      --tile-bg-color: #444;
+      --today-bg-color: #22C55E;
+      --today-text-color: #fff;
+      --active-bg-color: #38BDFA;
+      --active-text-color: #fff;
+      --hover-bg-color: #555;
+      --hover-text-color: #fff;
+      --nav-button-color: #ddd;
+      --nav-button-disabled-color: #666;
+      --weekdays-color: #bbb;
+      --weekend-color: #38BDFA;
+    }
+  }
+  

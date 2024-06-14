@@ -11,10 +11,13 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   { label: "Home", page: "home" },
-  { label: "About", page: "about" },
-  { label: "Education", page: "education" },
-  { label: "Experience", page: "experience" },
-  { label: "Projects", page: "projects" },
+  { label: "Mission", page: "about" },
+  { label: "About", page: "WeDo" },
+  { label: "E-Board", page: "executive-board" },
+  { label: "Sponsors", page: "sponsors" },
+  { label: "Events", page: "calendar" },
+  { label: "Gallery", page: "projects" },
+  { label: "Contact", page: "contact" },
 ];
 
 export default function Navbar() {
@@ -41,16 +44,16 @@ export default function Navbar() {
             >
               <div className="container flex items-center space-x-2 cursor-pointer">
                 <img
-                  src="/ai-mi-algorithm-svgrepo-com.png"
+                  src="wiredin-logo.png"
                   alt="Logo"
                   className="h-10 w-auto"
                 />
-                <h2 className="text-2xl font-bold">Manny Ortiz</h2>
+                <h2 className="text-2xl font-bold text-green-500">WIRED-IN</h2>
               </div>
             </Link>
             <div className="md:hidden">
               <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-grey-400 focus:border"
+                className="p-2 text-gray-700 rounded-lg outline-none focus:border-grey-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
@@ -70,7 +73,7 @@ export default function Navbar() {
                 <Link
                   key={idx}
                   to={item.page}
-                  className="block lg:inline-block text-neutral-900 hover:text-neutral-900 dark:text-neutral-100 cursor-pointer transition-all border-b-2 border-transparent hover:border-sky-400"
+                  className="block lg:inline-block text-neutral-900 hover:text-neutral-900 dark:text-neutral-100 cursor-pointer transition-all border-b-2 border-transparent hover:border-sky-500"
                   activeClass="active"
                   spy={true}
                   smooth={true}
@@ -91,7 +94,7 @@ export default function Navbar() {
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
-                  className="bg-sky-400 p-2 rounded-xl"
+                  className="bg-green-400 p-2 rounded-xl"
                 >
                   <RiSunLine size={25} color="black" />
                 </button>
@@ -108,7 +111,7 @@ export default function Navbar() {
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
-                  className="bg-sky-400 p-2 rounded-xl"
+                  className="bg-green-400 p-2 rounded-xl"
                 >
                   <RiSunLine size={25} color="black" />
                 </button>
