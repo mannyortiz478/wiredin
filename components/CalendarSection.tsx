@@ -13,11 +13,11 @@ const events = {
   // Add more events for different dates
 };
 
-const CalendarSection = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [eventDetails, setEventDetails] = useState([]);
+const CalendarSection: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [eventDetails, setEventDetails] = useState<Array<{ title: string; description: string; time: string }>>([]);
 
-  const handleDateChange = (date) => {
+  const handleDateChange = (date: Date) => {
     setSelectedDate(date);
     const dateString = date.toISOString().split('T')[0];
     setEventDetails(events[dateString] || []);
