@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="container mx-auto px-4">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2 md:w-1/2 flex justify-center md:justify-end">
+        <div className="md:mt-2 md:w-1/2 flex justify-center md:justify-end mr-5">
           <Image
             src="/wiredin-logo.png"
             alt="WIRED-IN Logo"
@@ -36,7 +36,7 @@ const HeroSection = () => {
               offset={-100}
               duration={500}
             >
-              Join Us
+              Join Us!
             </Link>
           </div>
         </div>

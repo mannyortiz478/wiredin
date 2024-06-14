@@ -1,6 +1,8 @@
-import React from "react"
-import Image from "next/image"
-import { FaBriefcase, FaGraduationCap, FaPencilAlt, FaHome } from 'react-icons/fa'  // Import icons
+"use client"; // Add this directive at the top of your file
+
+import React from "react";
+import Image from "next/image";
+import { FaBriefcase, FaGraduationCap, FaPencilAlt, FaHome } from "react-icons/fa"; // Import icons
 
 const executiveBoard = [
   {
@@ -9,16 +11,7 @@ const executiveBoard = [
     year: "Senior",
     major: "Computer Science",
     hometown: "Los Angeles, CA",
-    image: "/john-doe.jpg"
-  },
-  
-  {
-    name: "Jane Smith",
-    role: "Vice President",
-    year: "Junior",
-    major: "Information Technology",
-    hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/john-doe.jpg",
   },
   {
     name: "Jane Smith",
@@ -26,7 +19,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -34,7 +27,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -42,7 +35,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -50,7 +43,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -58,7 +51,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -66,7 +59,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -74,7 +67,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -82,7 +75,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -90,7 +83,7 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
   },
   {
     name: "Jane Smith",
@@ -98,10 +91,18 @@ const executiveBoard = [
     year: "Junior",
     major: "Information Technology",
     hometown: "New York, NY",
-    image: "/jane-smith.jpg"
+    image: "/jane-smith.jpg",
+  },
+  {
+    name: "Jane Smith",
+    role: "Vice President",
+    year: "Junior",
+    major: "Information Technology",
+    hometown: "New York, NY",
+    image: "/jane-smith.jpg",
   },
   // Add more members as needed
-]
+];
 
 const ExecutiveBoardSection = () => {
   return (
@@ -109,12 +110,15 @@ const ExecutiveBoardSection = () => {
       <div className="my-12 pb-12 md:pt-16 md:pb-48">
         <h1 className="text-center font-bold text-4xl">
           Executive Board
-          <hr className="w-12 h-1 mx-auto my-4 bg-green-500 border-0 rounded"></hr>
+          <hr className="w-12 h-1 mx-auto my-4 bg-green-400 border-0 rounded" />
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mt-12">
           {executiveBoard.map((member, idx) => (
-            <div key={idx} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-white w-full max-w-md dark:bg-green-500">
+            <div
+              key={idx}
+              className="flex flex-col items-center p-4 rounded-3xl shadow-md w-full max-w-md bg-white dark:bg-transparent dark:border dark:border-sky-400"
+            >
               <Image
                 src={member.image}
                 alt={`${member.name}'s image`}
@@ -122,19 +126,19 @@ const ExecutiveBoardSection = () => {
                 height={125}
                 className="rounded-full mb-6"
               />
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-green-500 dark:text-white mb-2">{member.name}</h2>
-                <div className="flex items-center justify-center text-xl text-sky-400 dark:text-white mb-1">
-                  <FaBriefcase className="mr-2 text-white-400" /> {member.role}
+              <div className="text-center dark:text-white">
+                <h2 className="text-2xl font-bold text-green-500 dark:text-green-400 mb-2">{member.name}</h2>
+                <div className="flex items-center justify-center italic text-xl text-sky-400 dark:text-sky-400 mb-1">
+                  <FaBriefcase className="mr-2 dark:text-sky-400" /> {member.role}
                 </div>
-                <div className="flex items-center justify-center text-xl text-white-500 mb-1">
-                  <FaGraduationCap className="mr-2" /> {member.year}
+                <div className="flex items-center justify-center text-xl text-neutral-900 dark:text-white mb-1">
+                  <FaGraduationCap className="mr-2 dark:text-white" /> {member.year}
                 </div>
-                <div className="flex items-center justify-center text-xl text-white-500 mb-1">
-                  <FaPencilAlt className="mr-2" /> {member.major}
+                <div className="flex items-center justify-center text-xl text-neutral-900 dark:text-white mb-1">
+                  <FaPencilAlt className="mr-2 dark:text-white" /> {member.major}
                 </div>
-                <div className="flex items-center justify-center text-xl text-white-500">
-                  <FaHome className="mr-2" /> {member.hometown}
+                <div className="flex items-center justify-center text-xl text-neutral-900 dark:text-white">
+                  <FaHome className="mr-2 dark:text-white" /> {member.hometown}
                 </div>
               </div>
             </div>
@@ -142,7 +146,7 @@ const ExecutiveBoardSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ExecutiveBoardSection
+export default ExecutiveBoardSection;

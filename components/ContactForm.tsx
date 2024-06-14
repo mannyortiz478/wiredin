@@ -104,11 +104,11 @@ const ContactFormSection: React.FC = () => {
             <p className="mb-4">
               Feel free to reach out to us with any questions, feedback, or inquiries you may have. Well get back to you as soon as possible!
             </p>
-            <p className="text-lg dark:text-green-500">
-              <strong>Phone:</strong> (609)477-9494
+            <p className="text-lg">
+              <strong className=" text-sky-400 dark:text-green-500">Phone:</strong> (609)477-9494
             </p>
-            <p className="text-lg dark:text-green-500">
-              <strong>Email:</strong> org.wiredin@gmail.com
+            <p className="text-lg">
+              <strong className=" text-sky-400 dark:text-green-500">Email:</strong> org.wiredin@gmail.com
             </p>
           </div>
         </div>

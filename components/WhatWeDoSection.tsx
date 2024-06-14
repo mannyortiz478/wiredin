@@ -45,11 +45,11 @@ const WhatWEDoSection = () => {
 
         <div className="flex flex-col items-center space-y-6 mt-12">
           {educationDetails.map((detail, index) => (
-            <div key={index} className="flex items-center w-full max-w-4xl p-4 border rounded-lg shadow-md bg-white hover:bg-green-300 dark:bg-green-500">
+            <div key={index} className="flex items-center w-full max-w-4xl p-4 rounded-2xl shadow-lg bg-white hover:bg-green-300 dark:bg-green-500">
               <div className="text-3xl text-green-500 mr-4 dark:text-white">{detail.icon}</div>
               <div>
                 <h2 className="text-xl font-bold text-green-600 dark:text-white">{detail.title}</h2>
-                <p className="text-sm text-neutral-500 whitespace-pre-line">{detail.description}</p>
+                <p className="text-sm text-neutral-700 whitespace-pre-line">{detail.description}</p>
               </div>
             </div>
           ))}

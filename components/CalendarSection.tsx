@@ -11,7 +11,7 @@ type EventDetails = {
   time: string;
 };
 
-const events: { [key: string]: EventDetails[] } = {
+const events: Record<string, EventDetails[]> = {
   '2024-05-26': [
     { title: 'Event 1', description: 'Details for event 1', time: '10:00 AM' },
     { title: 'Event 2', description: 'Details for event 2', time: '12:00 PM' },

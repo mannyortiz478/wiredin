@@ -20,11 +20,11 @@ const AboutSection = () => {
               className="rounded-lg"
             />
           </div>
-          <div className="md:w-1/2 mt-10 md:mt-0 md:pl-10 animate-pulse">
+          <div className="md:w-1/2 mt-10 md:mt-0 md:pl-10">
             <h1 className="text-3xl text-green-500 font-bold mb-6 text-center md:text-left">
               Our Mission Statement
             </h1>
-            <p className="text-xl text-left">
+            <p className="text-xl text-center italic text-sky-500">
             We serve to unite underrepresented students within the College of Information Sciences and Technology, 
             to cater to a supportive network that ultimately fosters an inclusive environment. 
             </p>
