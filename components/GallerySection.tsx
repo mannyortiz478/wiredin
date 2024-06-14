@@ -2,7 +2,6 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Image1 from '/public/nevada-logo.png;
 
 const AliceCarousel = dynamic(() => import('react-alice-carousel'), { ssr: false });
 
@@ -11,7 +10,6 @@ const ImageGallery: React.FC = () => {
 
   // Array of imported image files
   const images: string[] = [
-    Image1
     // Add more image imports here
   ];
 
@@ -22,10 +20,9 @@ const ImageGallery: React.FC = () => {
         {isClient && (
           <AliceCarousel
             mouseTracking
-            items={images.map((image, index) => (
+            items={images.map((index) => (
               <div key={index} className="w-64 h-64 mr-4">
                 <div className="bg-gray-200 rounded-md overflow-hidden shadow-lg">
-                  <img src={image} alt={`Image ${index}`} className="w-full h-full object-cover" />
                 </div>
               </div>
             ))}
