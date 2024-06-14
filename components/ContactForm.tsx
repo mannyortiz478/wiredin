@@ -102,7 +102,7 @@ const ContactFormSection: React.FC = () => {
           </div>
           <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10">
             <p className="mb-4">
-              Feel free to reach out to us with any questions, feedback, or inquiries you may have. We'll get back to you as soon as possible!
+              Feel free to reach out to us with any questions, feedback, or inquiries you may have. Well get back to you as soon as possible!
             </p>
             <p className="text-lg dark:text-green-500">
               <strong>Phone:</strong> (609)477-9494
