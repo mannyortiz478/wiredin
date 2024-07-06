@@ -42,11 +42,26 @@ export default function Navbar() {
         >
           <div className="container flex items-center space-x-2 cursor-pointer">
             <img src="wiredin-logo.png" alt="Logo" className="h-10 w-auto" />
-            <h2 className="text-2xl font-bold text-green-500">WIRED-IN</h2>
+            <h2 className="text-2xl font-bold text-green-500 oswald-font">WIREDIN</h2>
           </div>
         </Link>
 
         <div className="flex items-center space-x-4 md:hidden">
+          {currentTheme === "dark" ? (
+            <button
+              onClick={() => setTheme("light")}
+              className="bg-sky-400 p-2 rounded-xl"
+            >
+              <RiSunLine size={25} color="black" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setTheme("dark")}
+              className="bg-slate-100 p-1 rounded-xl"
+            >
+              <RiMoonFill size={25} color="black" />
+            </button>
+          )}
           <button
             className="p-2 text-neutral-500 rounded-lg outline-none focus:border-grey-400 focus:border dark:text-grey-400"
             onClick={() => setNavbar(!navbar)}
@@ -112,6 +127,12 @@ export default function Navbar() {
           ))}
         </div>
       )}
+      <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+        .oswald-font {
+          font-family: 'Oswald', sans-serif;
+        }
+      `}</style>
     </header>
   );
 }

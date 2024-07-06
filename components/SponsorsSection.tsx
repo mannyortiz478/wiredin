@@ -51,7 +51,7 @@ const SponsorsSection = () => {
                   className="rounded-xl shadow-xl hover:opacity-70 transition-opacity"
                 />
               </a>
-              <h2 className="text-center text-xl font-semibold mt-4 text-neutral-900 dark:text-green-500">{sponsor.name}</h2>
+              <h2 className="text-center text-xl font-semibold mt-4 text-neutral-900 dark:text-white">{sponsor.name}</h2>
             </div>
           </SlideUp>
         ))}

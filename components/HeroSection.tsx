@@ -1,10 +1,26 @@
-"use client" // this is a client component
-import React from "react"
-import Image from "next/image"
-import { Link } from "react-scroll/modules"
-import { HiArrowDown } from "react-icons/hi"
+"use client"; // this is a client component
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { Link } from "react-scroll/modules";
+import { HiArrowDown } from "react-icons/hi";
+import '../styles/globals.css'; // Ensure this path is correct
 
 const HeroSection = () => {
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  const fullText = `An IST student organization at Penn State, stands for (Wiring Innovation for Racial Equity and Development Inter-Network)`;
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText(prev => prev + fullText[index]);
+        setIndex(index + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
+
   return (
     <section id="home" className="container mx-auto px-4">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
@@ -21,11 +37,7 @@ const HeroSection = () => {
           <div>
             <h1 className="text-4xl font-bold mt-6 text-green-500 md:mt-0 md:text-7xl">WIRED-IN</h1>
             <p className="text-2xl mt-4 mb-6 md:text-2xl">
-              An {" "}
-              <span className="font-semibold text-blue-800">
-                IST{" "}
-              </span>
-              student organization at Penn State, stands for (Wiring Innovation for Racial Equity and Development Inter-Network)
+              <span className="hacker-text">{text}</span>
             </p>
             <Link
               to="join"
@@ -53,8 +65,23 @@ const HeroSection = () => {
           <HiArrowDown size={35} className="animate-bounce" />
         </Link>
       </div>
-    </section>
-  )
-}
+      <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap');
+        .hacker-text {
+          font-family: 'Kode Mono', monospace;
+          overflow: hidden;
+          white-space: pre-wrap;
+          border-right: 0.15em solid green; /* Cursor effect */
+          animation: blink-caret 0.5s step-end infinite;
+        }
 
-export default HeroSection
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: green; }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default HeroSection;

@@ -49,7 +49,7 @@ const WhatWEDoSection = () => {
               <div className="text-3xl text-green-500 mr-4 dark:text-white">{detail.icon}</div>
               <div>
                 <h2 className="text-xl font-bold text-green-600 dark:text-white">{detail.title}</h2>
-                <p className="text-sm text-neutral-700 whitespace-pre-line">{detail.description}</p>
+                <p className="text-sm text-neutral-700 whitespace-pre-line italic">{detail.description}</p>
               </div>
             </div>
           ))}
