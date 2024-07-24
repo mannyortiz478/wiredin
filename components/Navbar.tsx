@@ -42,7 +42,7 @@ export default function Navbar() {
         >
           <div className="container flex items-center space-x-2 cursor-pointer">
             <img src="wiredin-logo.png" alt="Logo" className="h-10 w-auto" />
-            <h2 className="text-2xl font-bold text-green-500 oswald-font">WIREDIN</h2>
+            <h2 className="text-2xl font-bold text-green-500 roboto-mono">WIREDIN</h2>
           </div>
         </Link>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
             {currentTheme === "dark" ? (
               <button
                 onClick={() => setTheme("light")}
-                className="bg-sky-400 p-2 rounded-xl"
+                className="bg-green-500 hover:bg-green-300 p-2 rounded-xl"
               >
                 <RiSunLine size={25} color="black" />
               </button>
@@ -128,9 +128,10 @@ export default function Navbar() {
         </div>
       )}
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-        .oswald-font {
-          font-family: 'Oswald', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+        .roboto-mono {
+          font-family: 'Roboto Mono', monospace;
+          font-weight: 500;
         }
       `}</style>
     </header>

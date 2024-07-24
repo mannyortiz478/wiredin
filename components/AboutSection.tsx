@@ -3,30 +3,49 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-bold text-4xl">
-          Mission
-          <hr className="w-10 h-1 mx-auto my-4 bg-green-500 border-0 rounded" />
-        </h1>
+    <section id="about" className="relative py-12 md:py-24 bg-gray-100 dark:bg-gray-800">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 z-[-1]">
+        <svg
+          className="w-full h-full text-gray-300 dark:text-gray-700"
+          fill="currentColor"
+          viewBox="0 0 1024 1024"
+          preserveAspectRatio="none"
+        >
+          <path d="M0 0h1024v1024H0z" />
+          <path d="M512 1024L0 512 512 0h512v1024H512z" />
+        </svg>
+      </div>
 
-        <div className="flex flex-col items-center justify-center md:flex-row md:text-left mt-12">
-          <div className="md:w-1/2 flex justify-center md:justify-end">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-green-600 dark:text-green-400 mb-4">
+            Mission
+          </h1>
+          <hr className="w-16 h-1 mx-auto bg-green-500 dark:bg-green-400 border-0 rounded" />
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          {/* Image */}
+          <div className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0">
             <Image
-              src="/hero-image2.png"
+              src="/web-2.png"
               alt="About Image"
-              width={325}
+              width={425}
               height={325}
-              className="rounded-lg"
+              className="rounded-3xl shadow-lg transition-transform transform hover:scale-105"
             />
           </div>
-          <div className="md:w-1/2 mt-10 md:mt-0 md:pl-10">
-            <h1 className="text-3xl text-green-500 font-bold mb-6 text-center md:text-left">
+
+          {/* Text Content */}
+          <div className="md:w-1/2 md:pl-12">
+            <h2 className="text-3xl font-bold text-green-600 dark:text-green-400 mb-6 animate__animated animate__fadeIn animate__delay-1s">
               Our Mission Statement
-            </h1>
-            <p className="text-xl text-center italic text-sky-500">
-            We serve to unite underrepresented students within the College of Information Sciences and Technology, 
-            to cater to a supportive network that ultimately fosters an inclusive environment. 
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300">
+              We serve to unite underrepresented students within the College of Information Sciences and Technology,
+              to cater to a supportive network that ultimately fosters an inclusive environment.
             </p>
           </div>
         </div>

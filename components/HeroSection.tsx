@@ -26,11 +26,11 @@ const HeroSection = () => {
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2 flex justify-center md:justify-end mr-5">
           <Image
-            src="/wiredin-logo.png"
+            src="/web-2.png"
             alt="WIRED-IN Logo"
             width={325}
-            height={325}
-            className="shadow-2xl"
+            height={525}
+            className="rounded-3xl shadow-2xl"
           />
         </div>
         <div className="md:mt-2 md:w-3/5 flex justify-center md:justify-start">
@@ -62,7 +62,6 @@ const HeroSection = () => {
           offset={-100}
           duration={500}
         >
-          <HiArrowDown size={35} className="animate-bounce" />
         </Link>
       </div>
       <style jsx>{`

@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-2">
           <a
-            href="#"
+            href="https://www.instagram.com/wiredin_psu/"
             rel="noreferrer"
             target="_blank"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/wiredin-psu/"
             rel="noreferrer"
             target="_blank"
           >
