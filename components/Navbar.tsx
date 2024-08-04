@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600 transition-colors duration-300">
       <div className="flex justify-between items-center py-3 md:py-5">
         <Link
           to="home"
@@ -50,20 +50,20 @@ export default function Navbar() {
           {currentTheme === "dark" ? (
             <button
               onClick={() => setTheme("light")}
-              className="bg-sky-400 p-2 rounded-xl"
+              className="bg-sky-400 p-2 rounded-xl transition-colors duration-300"
             >
               <RiSunLine size={25} color="black" />
             </button>
           ) : (
             <button
               onClick={() => setTheme("dark")}
-              className="bg-slate-100 p-1 rounded-xl"
+              className="bg-slate-100 p-1 rounded-xl transition-colors duration-300"
             >
               <RiMoonFill size={25} color="black" />
             </button>
           )}
           <button
-            className="p-2 text-neutral-500 rounded-lg outline-none focus:border-grey-400 focus:border dark:text-grey-400"
+            className="p-2 text-neutral-500 rounded-lg outline-none focus:border-gray-400 focus:border dark:text-gray-400"
             onClick={() => setNavbar(!navbar)}
           >
             {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
@@ -71,7 +71,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center justify-center w-full">
-          <div className="flex-grow flex justify-center">
+          <div className="flex-grow flex justify-center space-x-4">
             {NAV_ITEMS.map((item, idx) => (
               <Link
                 key={idx}
@@ -92,14 +92,14 @@ export default function Navbar() {
             {currentTheme === "dark" ? (
               <button
                 onClick={() => setTheme("light")}
-                className="bg-green-500 hover:bg-green-300 p-2 rounded-xl"
+                className="bg-green-500 hover:bg-green-300 p-2 rounded-xl transition-colors duration-300"
               >
                 <RiSunLine size={25} color="black" />
               </button>
             ) : (
               <button
                 onClick={() => setTheme("dark")}
-                className="bg-slate-100 p-1 rounded-xl"
+                className="bg-slate-100 p-1 rounded-xl transition-colors duration-300"
               >
                 <RiMoonFill size={25} color="black" />
               </button>
@@ -109,7 +109,7 @@ export default function Navbar() {
       </div>
 
       {navbar && (
-        <div className="flex flex-col items-center justify-center md:hidden">
+        <div className="flex flex-col items-center justify-center md:hidden mt-4 space-y-2">
           {NAV_ITEMS.map((item, idx) => (
             <Link
               key={idx}

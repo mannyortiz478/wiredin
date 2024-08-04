@@ -1,7 +1,7 @@
-"use client";  // Add this line at the top
+"use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { FaPaperPlane } from "react-icons/fa";  // Import the paper airplane icon
+import { FaPaperPlane } from "react-icons/fa";
 
 interface FormData {
   name: string;
@@ -28,9 +28,8 @@ const ContactFormSection: React.FC = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you can handle form submission, e.g., send the form data to a backend server
+    // Handle form submission here
     console.log(formData);
-    // Reset form fields after submission
     setFormData({
       name: "",
       email: "",
@@ -39,18 +38,18 @@ const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-12">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-bold text-4xl">
+    <section id="contact" className="py-12 bg-gray-100 dark:bg-gray-900">
+      <div className="container mx-auto my-12 pb-12 md:pt-16 md:pb-48">
+        <h1 className="text-center font-bold text-4xl text-gray-900 dark:text-white">
           Contact Us
           <hr className="w-10 h-1 mx-auto my-4 bg-green-500 border-0 rounded" />
         </h1>
 
         <div className="flex flex-col items-center justify-center md:flex-row md:text-left mt-12 px-4 sm:px-6 lg:px-8">
           <div className="w-full md:w-1/2">
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="font-medium text-gray-70 dark:text-green-500">
+                <label htmlFor="name" className="block font-medium text-gray-700 dark:text-green-500">
                   Name
                 </label>
                 <input
@@ -60,11 +59,11 @@ const ContactFormSection: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 p-2 border border-gray-300 rounded-lg w-full"
+                  className="mt-1 p-3 border border-gray-300 rounded-lg w-full bg-gray-50 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block font-medium text-gray-70 dark:text-green-500">
+                <label htmlFor="email" className="block font-medium text-gray-700 dark:text-green-500">
                   Email
                 </label>
                 <input
@@ -74,11 +73,11 @@ const ContactFormSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="round-lg mt-1 p-2 border border-gray-300 rounded-md w-full"
+                  className="mt-1 p-3 border border-gray-300 rounded-lg w-full bg-gray-50 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block font-medium text-gray-70 dark:text-green-500">
+                <label htmlFor="message" className="block font-medium text-gray-700 dark:text-green-500">
                   Message
                 </label>
                 <textarea
@@ -88,24 +87,24 @@ const ContactFormSection: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+                  className="mt-1 p-3 border border-gray-300 rounded-lg w-full bg-gray-50 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 />
               </div>
               <button
                 type="submit"
-                className="flex items-center justify-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors"
+                className="flex items-center justify-center px-4 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors w-full"
               >
                 Send
                 <FaPaperPlane className="ml-2" />
               </button>
             </form>
           </div>
-          <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10">
-            <p className="mb-4">
+          <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10 text-gray-900 dark:text-white">
+            <p className="mb-6 text-lg">
               Feel free to reach out to us with any questions, feedback, or inquiries you may have. Well get back to you as soon as possible!
             </p>
-            <p className="text-lg">
-              <strong className=" text-sky-400 dark:text-green-500">Phone:</strong> (609)477-9494
+            <p className="text-lg mb-2">
+              <strong className=" text-sky-400 dark:text-green-500">Phone:</strong> (609) 477-9494
             </p>
             <p className="text-lg">
               <strong className=" text-sky-400 dark:text-green-500">Email:</strong> org.wiredin@gmail.com

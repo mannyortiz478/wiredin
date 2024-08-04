@@ -56,7 +56,7 @@ const WhatWEDoSection = () => {
             <div
               key={index}
               data-aos="fade-up"
-              className="flex items-center w-full max-w-4xl p-4 rounded-2xl shadow-lg bg-white hover:bg-green-300 dark:bg-green-500 dark:hover:bg-green-400 transition-transform transform hover:scale-105"
+              className="flex items-center w-full max-w-4xl p-4 rounded-2xl shadow-lg bg-white hover:bg-green-300 dark:bg-green-500 transition-transform transform hover:scale-105"
             >
               <div className="p-4 rounded-full bg-green-500 text-white text-3xl mr-4">
                 {detail.icon}
