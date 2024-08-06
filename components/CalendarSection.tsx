@@ -39,7 +39,7 @@ const CalendarSection: React.FC = () => {
   };
 
   return (
-    <section id="calendar" className="py-12">
+    <section id="calendar" className="py-12 bg-gray-100 dark:bg-gray-900">
       <div className="my-12 pb-12 md:pt-16 md:pb-48 flex flex-col items-center">
         <div className="w-full">
           <h1 className="text-center font-bold text-4xl mb-4">
@@ -47,14 +47,14 @@ const CalendarSection: React.FC = () => {
             <hr className="w-10 h-1 my-4 bg-green-500 border-0 rounded mx-auto" />
           </h1>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 md:pr-10">
             <Calendar
               onChange={handleDateChange}
               value={selectedDate}
+              className="mx-auto"
             />
           </div>
-
           <div className="md:w-1/2 flex flex-col justify-center mt-10 md:mt-0">
             <h2 className="text-2xl font-bold text-sky-400 mb-4">Events on {selectedDate.toDateString()}</h2>
             {eventDetails.length === 0 ? (

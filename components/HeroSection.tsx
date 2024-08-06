@@ -35,7 +35,7 @@ const HeroSection = () => {
         </div>
         <div className="md:mt-2 md:w-3/5 flex justify-center md:justify-start">
           <div>
-            <h1 className="text-4xl font-bold mt-6 text-green-500 md:mt-0 md:text-7xl">WIRED-IN</h1>
+            <h1 className="text-4xl font-bold mt-6 text-green-500 md:mt-0 md:text-7xl">WIREDIN</h1>
             <p className="text-2xl mt-4 mb-6 md:text-2xl">
               <span className="hacker-text">{text}</span>
             </p>

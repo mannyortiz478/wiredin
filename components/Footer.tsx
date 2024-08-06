@@ -10,7 +10,7 @@ const Footer = () => {
       <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0 dark:bg-neutral-200"></hr>
       <div className="mx-auto p-4 flex flex-col text-center md:flex-row md:justify-between">
         <div className="flex flex-row items-center justify-center space-x-1 text-Green-400">
-          ©2024 WIRED-IN<a href="/" className="hover:underline"></a>
+          ©2024 WIREDIN<a href="/" className="hover:underline"></a>
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-2">
           <a

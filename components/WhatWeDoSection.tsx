@@ -63,7 +63,7 @@ const WhatWEDoSection = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-green-600 dark:text-white">{detail.title}</h2>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 whitespace-pre-line italic">{detail.description}</p>
+                <p className="text-sm text-neutral-700 dark:text-neutral-100 whitespace-pre-line italic">{detail.description}</p>
               </div>
             </div>
           ))}
