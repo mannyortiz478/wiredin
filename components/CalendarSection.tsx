@@ -16,6 +16,9 @@ const events: Record<string, EventDetails[]> = {
     { title: 'Event 1', description: 'Details for event 1', time: '10:00 AM' },
     { title: 'Event 2', description: 'Details for event 2', time: '12:00 PM' },
   ],
+  '2024-09-05': [
+    { title: 'First General Body Meeting!!', description: 'Join us for our first meeting of the year in Westgate E165. Come and meet the e-board. Food will be provided!', time: '6:00 PM' }
+  ],
   // Add more events for different dates
 };
 

@@ -4,30 +4,70 @@ import SlideUp from "./SlideUp";
 
 const sponsors = [
   {
-    name: "Boeing",
-    image: "/Boeing-logo.jpeg",
-    link: "https://sponsor1.com"
-  },
-  {
     name: "Chevron",
     image: "/chevron-logo.png",
-    link: "https://sponsor2.com"
+    link: "https://www.chevron.com"
   },
   {
     name: "EY",
     image: "/ey-logo.png",
-    link: "https://sponsor3.com"
+    link: "https://www.ey.com"
+  },
+  {
+    name: "KPMG",
+    image: "/kpmg-logo.png",
+    link: "https://home.kpmg"
+  },
+  {
+    name: "PwC",
+    image: "/pwc-logo.png",
+    link: "https://www.pwc.com"
+  },
+  {
+    name: "Accenture",
+    image: "/accenturelogo.png",
+    link: "https://www.accenture.com"
+  },
+  {
+    name: "Capital One",
+    image: "/Capital-One-Logo.png",
+    link: "https://www.capitalone.com"
+  },
+  {
+    name: "Deloitte",
+    image: "/Deloitte-Logo-PNG-Pic.png",
+    link: "https://www2.deloitte.com"
+  },
+  {
+    name: "PEPISCO",
+    image: "/pepisco-logo.png",
+    link: "https://www.pepsico.com"
+  },
+  {
+    name: "NSA",
+    image: "/nsa-logo.png",
+    link: "https://www.nsa.gov"
   },
   {
     name: "RSM",
     image: "/rsm-logo.png",
-    link: "https://sponsor4.com"
+    link: "https://rsmus.com"
+  },
+  {
+    name: "PNC",
+    image: "/pnc-logo.png",
+    link: "https://www.pnc.com"
+  },
+  {
+    name: "General Atlantic",
+    image: "/ga-logo.png",
+    link: "https://www.generalatlantic.com"
   },
   {
     name: "College of IST",
     image: "/IST-logo.png",
-    link: "https://sponsor5.com"
-  },
+    link: "https://ist.psu.edu"
+  }
 ];
 
 const SponsorsSection = () => {

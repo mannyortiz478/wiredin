@@ -46,7 +46,7 @@ const JoinUs = () => {
             <hr className="w-10 h-1 my-4 bg-green-500 border-0 rounded mx-auto md:mx-0" />
           </h1>
           <p className="mb-6 text-lg">
-            Wired-In membership comes with numerous benefits and supports
+            WIREDIN membership comes with numerous benefits and supports
             the organization to provide more opportunities. To be an official
             member requires three easy steps, which are listed below!
           </p>
@@ -101,7 +101,7 @@ const JoinUs = () => {
                       </>
                     ) : title === "Database" ? (
                       <button className="px-4 py-2 bg-neutral-300 text-black font-bold rounded-md hover:bg-neutral-200 transition-colors animate-pulse">
-                        WIRED-IN Member Database
+                        WIREDIN Member Database
                       </button>
                     ) : (
                       <a

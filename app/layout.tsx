@@ -15,6 +15,7 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
+      <meta name="google-site-verification" content="ELdo-kdNmCK6MOaONZtD8fsJ0r3gsSNcZmcZf8xkV_A" />
       <head />
       <body className="dark:bg-stone-900">
         <ThemeProvider enableSystem={true} attribute="class">
