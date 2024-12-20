@@ -30,7 +30,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0">
             <Image
-              src="/web-2.png"
+              src="/exec2.jpg"
               alt="About Image"
               width={425}
               height={325}

@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="md:mt-2 md:w-1/2 flex justify-center md:justify-end mr-5">
           <Image
             src="/web-2.png"
-            alt="WIRED-IN Logo"
+            alt="hero section image"
             width={325}
             height={525}
             className="rounded-3xl shadow-2xl"

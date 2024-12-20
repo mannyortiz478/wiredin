@@ -127,8 +127,8 @@ const JoinUs = () => {
           }`}
         >
           <Image
-            src="/web-1.png"
-            alt="Wiredin photo"
+            src="/highlight1.jpg"
+            alt="Wiredin Highlight Photo"
             width={500}
             height={600}
             className="rounded-3xl shadow-lg transition-transform transform hover:scale-105"
