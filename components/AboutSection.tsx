@@ -44,7 +44,7 @@ const AboutSection = () => {
               Our Mission Statement
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              We serve to unite underrepresented students within the College of Information Sciences and Technology,
+              We serve to a unite underrepresented students within the College of Information Sciences and Technology,
               to cater to a supportive network that ultimately fosters an inclusive environment.
             </p>
           </div>
